@@ -6,7 +6,9 @@
     <div class="container menu_container">
       
       <div class="header_logo">
-        <img src="<?php bloginfo('template_directory' ); ?>/assets/img/main_logo.png" alt="">
+        <a href="<?php bloginfo('url' ); ?>/home">
+          <img src="<?php bloginfo('template_directory' ); ?>/assets/img/main_logo.png" alt="">
+        </a>
       </div>
 
       <div class="navbar-header">
@@ -18,11 +20,11 @@
           <span class="icon-bar"></span>
         </button>
         <div>
-          <a href="#">
+          <a href="<?php bloginfo('url' ); ?>/home">
 
           <?php if(get_field('header_logo', 'option')) { ?>
 
-            <img src="<?php the_field('header_logo', 'option') ?>" alt="" class="header_logo">
+              <img src="<?php the_field('header_logo', 'option') ?>" alt="" class="header_logo">
 
           <?php } ?>  
 

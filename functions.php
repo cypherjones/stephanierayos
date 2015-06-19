@@ -155,51 +155,51 @@ if( function_exists('acf_add_options_page') ) {
 
   // Register Custom Post Type
 
-    function gallery_post_type() {
+  //   function gallery_post_type() {
 
-      $labels = array(
-        'name'                => _x( 'Gallery', 'Post Type General Name', 'parkermccullom' ),
-        'singular_name'       => _x( 'Gallery', 'Post Type Singular Name', 'parkermccullom' ),
-        'menu_name'           => __( 'Images', 'stephanierayos' ),
-        'parent_item_colon'   => __( 'Parent Images:', 'stephanierayos' ),
-        'all_items'           => __( 'All Images', 'stephanierayos' ),
-        'view_item'           => __( 'View Images', 'stephanierayos' ),
-        'add_new_item'        => __( 'Add New Images', 'stephanierayos' ),
-        'add_new'             => __( 'Add Images', 'stephanierayos' ),
-        'edit_item'           => __( 'Edit Images', 'stephanierayos' ),
-        'update_item'         => __( 'Update Images', 'stephanierayos' ),
-        'search_items'        => __( 'Search Images', 'stephanierayos' ),
-        'not_found'           => __( 'Not found', 'stephanierayos' ),
-        'not_found_in_trash'  => __( 'Not found in Trash', 'stephanierayos' ),
-      );
-      $args = array(
-        'label'               => __( 'gallery', 'stephanierayos' ),
-        'description'         => __( 'Post Type Description', 'stephanierayos' ),
-        'labels'              => $labels,
-        'supports'            => array( 'title', 'thumbnail' ),
-        'taxonomies'          => array( 'category', 'post_tag' ),
-        'hierarchical'        => false,
-        'public'              => true,
-        'show_ui'             => true,
-        'show_in_menu'        => true,
-        'show_in_nav_menus'   => true,
-        'show_in_admin_bar'   => true,
-        'menu_position'       => 10,
-        'can_export'          => true,
-        'has_archive'         => true,
-        'exclude_from_search' => false,
-        'publicly_queryable'  => true,
-        'capability_type'     => 'page',
-        'rewrite'             => array('slug' => 'gallery'),
-        'menu_icon'           => 'dashicons-format-gallery',
-      );
-      register_post_type( 'gallery', $args );
+  //     $labels = array(
+  //       'name'                => _x( 'Gallery', 'Post Type General Name', 'stephanierayos' ),
+  //       'singular_name'       => _x( 'Gallery', 'Post Type Singular Name', 'stephanierayos' ),
+  //       'menu_name'           => __( 'Images', 'stephanierayos' ),
+  //       'parent_item_colon'   => __( 'Parent Images:', 'stephanierayos' ),
+  //       'all_items'           => __( 'All Images', 'stephanierayos' ),
+  //       'view_item'           => __( 'View Images', 'stephanierayos' ),
+  //       'add_new_item'        => __( 'Add New Images', 'stephanierayos' ),
+  //       'add_new'             => __( 'Add Images', 'stephanierayos' ),
+  //       'edit_item'           => __( 'Edit Images', 'stephanierayos' ),
+  //       'update_item'         => __( 'Update Images', 'stephanierayos' ),
+  //       'search_items'        => __( 'Search Images', 'stephanierayos' ),
+  //       'not_found'           => __( 'Not found', 'stephanierayos' ),
+  //       'not_found_in_trash'  => __( 'Not found in Trash', 'stephanierayos' ),
+  //     );
+  //     $args = array(
+  //       'label'               => __( 'gallery', 'stephanierayos' ),
+  //       'description'         => __( 'Post Type Description', 'stephanierayos' ),
+  //       'labels'              => $labels,
+  //       'supports'            => array( 'title', 'thumbnail' ),
+  //       'taxonomies'          => array( 'category', 'post_tag' ),
+  //       'hierarchical'        => false,
+  //       'public'              => true,
+  //       'show_ui'             => true,
+  //       'show_in_menu'        => true,
+  //       'show_in_nav_menus'   => true,
+  //       'show_in_admin_bar'   => true,
+  //       'menu_position'       => 10,
+  //       'can_export'          => true,
+  //       'has_archive'         => true,
+  //       'exclude_from_search' => false,
+  //       'publicly_queryable'  => true,
+  //       'capability_type'     => 'page',
+  //       'rewrite'             => array('slug' => 'gallery'),
+  //       'menu_icon'           => 'dashicons-format-gallery',
+  //     );
+  //     register_post_type( 'gallery', $args );
 
-    }
+  //   }
 
-  // Hook into the 'init' action
+  // // Hook into the 'init' action
   
-    add_action( 'init', 'gallery_post_type', 0 );
+  //   add_action( 'init', 'gallery_post_type', 0 );
 
 //   // Register Custom Post Type
 

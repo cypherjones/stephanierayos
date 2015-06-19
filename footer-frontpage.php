@@ -14,6 +14,7 @@
 
 <script>
 	$('.carousel').carousel({
-		pause: "false"
+		pause: "false",
+    interval: 2000
 	});
 </script>

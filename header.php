@@ -42,11 +42,12 @@
     <?php //comments_popup_script(); // off by default ?>
     <?php wp_head(); ?>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <!-- Place somewhere in the <head> of your document -->
     <link rel="stylesheet" href="<?php bloginfo('template_directory' ); ?>/css/flexslider.css" type="text/css">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="http://flexslider.woothemes.com/js/jquery.flexslider.js"></script>
+
     
     <!-- flexslider -->
 
@@ -75,13 +76,26 @@
     <link href="<?php bloginfo('template_directory' ); ?>/css/bootstrap.css" rel="stylesheet">
     <script src="<?php bloginfo('template_directory' ); ?>/js/bootstrap.js" type='text/javascript'></script>
 
-    <!-- isotope -->
+    <!-- isotope 
     <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.isotope.min.js" type="text/javascript"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/isotope.js" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/isotope.js" type="text/javascript"></script> -->
 
-    <!-- prettyphoto -->
-    <link rel="stylesheet" href="<?php bloginfo('template_directory' ); ?>/css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
-    <script src="<?php bloginfo('template_directory' ); ?>/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+    <!-- fancybox     -->
+
+    <!-- Add mousewheel plugin (this is optional) -->
+    <script type="text/javascript" src="<?php bloginfo('template_directory' ); ?>/js/jquery.mousewheel-3.0.6.pack.js"></script>
+
+    <!-- Add fancyBox -->
+    <link rel="stylesheet" href="<?php bloginfo('template_directory' ); ?>/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="<?php bloginfo('template_directory' ); ?>/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+    <!-- Optionally add helpers - button, thumbnail and/or media -->
+    <link rel="stylesheet" href="<?php bloginfo('template_directory' ); ?>/css/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="<?php bloginfo('template_directory' ); ?>/js/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_directory' ); ?>/js/jquery.fancybox-media.js?v=1.0.6"></script>
+
+    <link rel="stylesheet" href="<?php bloginfo('template_directory' ); ?>/css/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+    <script type="text/javascript" src="<?php bloginfo('template_directory' ); ?>/js/jquery.fancybox-thumbs.js?v=1.0.7"></script>
 
     
 

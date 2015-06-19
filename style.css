@@ -10,6 +10,29 @@ Author URI: http://beefymarketing.com
 
 @import url(css/gravity.css);
 
+@font-face {
+    font-family: 'narwhalbold';
+    src: url('fonts/narwhal_bold-webfont.eot');
+    src: url('fonts/narwhal_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/narwhal_bold-webfont.woff') format('woff'),
+         url('fonts/narwhal_bold-webfont.ttf') format('truetype'),
+         url('fonts/narwhal_bold-webfont.svg#narwhalbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'narwhalregular';
+    src: url('fonts/narwhal-webfont.eot');
+    src: url('fonts/narwhal-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/narwhal-webfont.woff') format('woff'),
+         url('fonts/narwhal-webfont.ttf') format('truetype'),
+         url('fonts/narwhal-webfont.svg#narwhalregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 /*------------- What is Normal Anyway --------------*/
 
 body, select, input, textarea {
@@ -78,6 +101,22 @@ a img.aligncenter {
   margin-left: auto;
   margin-right: auto
 }
+@media screen and (max-width: 991px) {
+  .desktop_footer {
+    display: none;
+  }
+  .mobile_footer {
+    display: block;
+  }
+}
+@media screen and (min-width: 992px) {
+  .mobile_footer {
+    display: none;
+  }
+  .desktop_footer {
+    display: block;
+  }
+}
 /* = Header
 -------------------------------------------------------------- */
 #header_nav.navbar.navbar-default {
@@ -85,8 +124,8 @@ a img.aligncenter {
   border: none;
 }
 .navbar-default .navbar-collapse {
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+  border-top: 1px solid #9B9B9D !important;
+  border-bottom: 1px solid #9B9B9D !important;
   margin-top: 30px;
 }
 .header_logo {
@@ -97,8 +136,7 @@ a img.aligncenter {
   display: inline-block;
   float: none;
   vertical-align: top;
-  font-family: 'lato';
-  font-weight: 100;
+  font-family: 'narwhalbold';
   text-transform: uppercase;
 }
 .navbar-nav > li {
@@ -128,7 +166,7 @@ a img.aligncenter {
   text-align: center;
 }
 .btn.front-page {
-  font-family: 'lato';
+  font-family: 'narwhalregular';
   position: relative;
   top: 212px;
   outline: none;
@@ -260,20 +298,25 @@ inspired from http://codepen.io/Rowno/pen/Afykb
 
 /*mobile*/
 
-.mobile #page {
+.mobile #page,
+.mobile .front_pg_img {
   margin-top: 180px;
 }
-
+.page-portfolio,
+.page-about,
+.page-contact {
+  margin-bottom: 20px;
+}
 
 /* = About Page
 -------------------------------------------------------------- */
 
 .front_pg_img img {
-  width: 1200px;
+  /*width: 1200px;*/
 }
 .about .content p {
   font-family: 'lato';
-  font-size: 18px;
+  font-size: 17px;
   color: #808184;
   font-weight: 200;
 }
@@ -298,7 +341,7 @@ inspired from http://codepen.io/Rowno/pen/Afykb
 .portfolio .btn {
   border-radius: 0;
   color: #fff;
-  font-family: 'lato';
+  font-family: 'narwhalregular';
   background: #777777;
   margin-bottom: 5px;
   margin-right: 5px;
@@ -310,6 +353,9 @@ inspired from http://codepen.io/Rowno/pen/Afykb
   .portfolio {
     text-align: center;
   }
+}
+#filters > a:nth-child(2) {
+  /*display: none;*/
 }
 
 /*prettyphoto*/
@@ -368,8 +414,9 @@ body .pp_pic_holder.pp_default {
 /* = Contact Page
 -------------------------------------------------------------- */
 .form {
-  font-family: 'lato';
+  font-family: 'narwhalregular';
   font-size: 10px;
+  height: 235px;
 }
 .form p {
   font-size: 14px;
@@ -412,55 +459,74 @@ body .pp_pic_holder.pp_default {
   float: right;
   height: 158px;
   position: relative;
-  bottom: 20px;
+  bottom: 184px;
   border-radius: 0px;
 }
 .form input[type="submit"] {
-  float: right;
+  float: center;
   border-radius: 0px;
-  background: #777777;
+  background: transparent;
   border: none;
-  color: #fff;
+  color: #000;
   text-transform: uppercase;
+  position: relative;
+  right: -47%;
 }
 .form .gform_wrapper .gfield_required {
   display: none;
 }
+.form .gform_wrapper li {
+  margin-bottom: 57px;
+}
 
+.form #field_1_4 {
+  margin-bottom: 0;
+}
 /* = Footer
 -------------------------------------------------------------- */
 .simple_footer {
   margin-top: 40px;
-  border-top: 1px solid #e7e7e7;
-  border-bottom: 1px solid #e7e7e7;
+  border-top: 1px solid #9B9B9D;
   text-align: center;
 }
 .simple_footer ul {
   list-style: none;
   padding-left: 0;
-  margin-top: 5px;
-  margin-bottom: 5px;
+/*  margin-top: 5px;
+  margin-bottom: 5px;*/
 }
 .simple_footer ul li {
   display: inline-block;
   color: #777;
-  font-family: 'lato';
-  font-size: 18px;
+  font-family: 'narwhalbold';
+  font-size: 11px;
   text-transform: uppercase;
   padding: 0 20px;
   font-weight: 100;
 }
 footer {
-  margin-bottom: 300px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
 }
 #front_page footer {
   margin-bottom: 0 !important;
+}
+
+body footer .navbar-default {
+  background-color: transparent;
+  border: none;
 }
 
 /*mobile*/
 
 .mobile footer {
   margin-bottom: 40px;
+}
+@media screen and (min-width: 992px) {
+  .simple_footer ul li {
+    font-size: 16px;
+  }
 }
 
 /* = Isotope Gallery
@@ -492,6 +558,7 @@ footer {
 
 #posts img {
   width: 100%;
+  margin-top: 12px;
 }
 
 .isotope {
@@ -530,5 +597,51 @@ html,body{height:100%;}
   .col-xs-12 .col-xs-3 {
     padding-left: 5px;
     padding-right: 5px;
+  }
+}
+
+.port-case {
+  position: relative;
+  display: inline-block;
+  top: -50%;
+}
+.port-case.no-top {
+  top: 0;
+}
+.port-box img {
+  position: relative;
+  bottom: -50%;
+  margin-top: 0 !important;
+}
+
+@media screen and (min-width: 320px) {
+  .port-box {
+    height: 88px !important;
+    overflow: hidden;
+    margin: 5px 0px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .port-box {
+    height: 133px !important;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 768px) {
+  .port-box {
+    height: 231px !important;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 992px) {
+  .port-box {
+    height: 95px !important;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .port-box {
+    height: 108px !important;
+    overflow: hidden;
   }
 }

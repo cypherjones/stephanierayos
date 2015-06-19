@@ -24,7 +24,7 @@
     while ( have_rows('images_table') ) : the_row(); ?>
       
       <div class="item">
-        <div class="fill" style="background-image:url(<?php the_sub_field('images') ?>);">
+        <div class="fill" style="background-image:url(<?php the_sub_field('image') ?>);">
           <div class="container center">
             <a href="<?php echo esc_url(get_permalink(get_page_by_title('home' ) )); ?>" id="front_page_button" class=""></a>
           </div>
